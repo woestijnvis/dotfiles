@@ -1,0 +1,40 @@
+# .bashrc for macOS
+
+# .:: EXPORTS ::.
+#
+# Set the language:
+export LANG='en_US.UTF-8'
+
+# Set the locale for numeric formatting:
+export LC_NUMERIC='nl_NL.UTF-8'
+
+# Set the timezone:
+export TZ='Europe/Amsterdam'
+
+# Set the prompt, it will look like this:
+#
+# > <user>@<host> :: <working directory>
+# >> <cursor>
+export PS1='\n> \u@\h :: \w\n>> '
+
+# !! Make sure python 3+ is installed via brew !!
+#
+# Setting PATH for Python 3.7:
+export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+
+# !! Make sure bash_completion is installed via brew !!
+#
+# Add bash completion to the shell:
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+
+# .:: ALIASES ::.
+#
+# List files and directories with:
+# -la : permissions, ownership, size and modification date
+# -h  : sizes in human readable units
+# -g  : fabulous colors
+alias ls='ls -lahG'
+
+# Cat files and show non-printing characters:
+alias cat='cat -v'

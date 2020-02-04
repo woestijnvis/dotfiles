@@ -1,0 +1,32 @@
+# .bashrc for OpenBSD
+
+# .:: EXPORTS ::.
+#
+# Set the language:
+export LANG='en_US.UTF-8'
+
+# Set the locale for numeric formatting:
+export LC_NUMERIC='nl_NL.UTF-8'
+
+# Set the timezone:
+export TZ='Europe/Amsterdam'
+
+# Set the prompt, it will look like this:
+#
+# > <user>@<host> :: <working directory>
+# >> <cursor>
+export PS1='\n> \u@\h :: \w\n>> '
+
+
+# .:: ALIASES ::.
+#
+# !! Make sure colorls is installed !!
+#
+# List files and directories with:
+# -la : permissions, ownership, size and modification date
+# -h  : sizes in human readable units
+# -G  : fabulous colors
+alias ls='colorls -lahG'
+
+# Cat files and show non-printing characters:
+alias cat='cat -v'
